@@ -1,15 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DevOps Roadmap</title>
-<link rel="stylesheet" href="styles.css">
-<script src="
-https://cdn.jsdelivr.net/npm/mindmap-js@1.0.1/dist/mindmap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Engineer Mind Map</title>
+    <!-- Include the jsmind library from a CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsmind@2.2.0/style/jsmind.css" />
+    <script src="https://cdn.jsdelivr.net/npm/jsmind@2.2.0/js/jsmind.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsmind@2.2.0/js/jsmind.draggable.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        #mindmap_container {
+            width: 100%;
+            height: 100vh;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body>
-<div id="mindmap"></div>
-<script src="script.js"></script>
+    <div id="mindmap_container"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const mindmapData = {
+                "meta": {
+                    "name": "DevOpsEngineerMindMap",
+                    "author": "ChatGPT",
+                    "version": "1.0"
+                },
+                "format": "node_tree",
+                "data": {
+                    "id": "root",
+                    "topic": "The Ultimate Guide to Becoming a DevOps Engineer",
+                    "children": [
+                        {
+                            "id": "node1",
+                            "topic": "Understand the Basics of DevOps",
+                            "direction": "right",
+                            "children": [
+                                { "id": "node1_1", "topic": "What is DevOps?" },
+                                { "id": "node1_2", "topic": "Continuous Integration (CI)" },
+                                { "id": "node1_3", "topic": "Continuous Delivery (CD)" },
+                                { "id": "node1_4", "topic": "Infrastructure as Code (IaC)" },
+                                { "id": "node1_5", "topic": "Monitoring" },
+                                { "id": "node1_6", "topic": "Cultural Shift in DevOps" }
+                            ]
+                        },
+                        {
+                            "id": "node2",
+                            "topic": "Learn Programming and Scripting",
+                            "direction": "right",
+                            "children": [
+                                { "id": "node2_1", "topic": "Python" },
+                                { "id": "node2_2", "topic": "JavaScript" },
+                                { "id": "node2_3", "topic": "Bash/Shell Scripting" }
+                            ]
+                        },
+                        {
+                            "id": "node3",
+                            "topic": "Get Comfortable with Linux/Unix Systems",
+                            "direction": "right",
+                            "children": [
+                                { "id": "node3_1", "topic": "Commands and File Management" },
+                                { "id": "node3_2", "topic": "System Monitoring and Process Management" },
+                                { "id": "node3_3", "topic": "Networking Basics" }
+                            ]
+                        },
+                        {
+                            "id": "node4",
+                            "topic": "Understand Version Control Systems",
+                            "direction": "right",
+                            "children": [
+                                { "id": "node4_1", "topic": "Git" }
+                            ]
+                        },
+                        {
+                            "id": "node5",
+                            "topic": "Master CI/CD",
+                            "direction": "left",
+                            "children": [
+                                { "id": "node5_1", "topic": "Jenkins" },
+                                { "id": "node5_2", "topic": "GitLab CI/CD" },
+                                { "id": "node5_3", "topic": "CircleCI or Travis CI" },
+                                { "id": "node5_4", "topic": "CI/CD Concepts" }
+                            ]
+                        },
+                        {
+                            "id": "node6",
+                            "topic": "Learn Configuration Management and IaC",
+                            "direction": "left",
+                            "children": [
+                                { "id": "node6_1", "topic": "Ansible" },
+                                { "id": "node6_2", "topic": "Terraform" },
+                                { "id": "node6_3", "topic": "Chef or Puppet" }
+                            ]
+                        },
+                        {
+                            "id": "node7",
+                            "topic": "Get Familiar with Containers and Orchestration",
+                            "direction": "left",
+                            "children": [
+                                { "id": "node7_1", "topic": "Docker" },
+                                { "id": "node7_2", "topic": "Kubernetes" },
+                                { "id": "node7_3", "topic": "Docker Compose" }
+                            ]
+                        },
+                        {
+                            "id": "node8",
+                            "topic": "Understand Cloud Services",
+                            "direction": "left",
+                            "children": [
+                                { "id": "node8_1", "topic": "AWS" },
+                                { "id": "node8_2", "topic": "Azure or GCP" },
+                                { "id": "node8_3", "topic": "Cloud Concepts" }
+                            ]
+                        },
+                        {
+                            "id": "node9",
+                            "topic": "Learn Monitoring and Logging",
+                            "direction": "left",
+                            "children": [
+                                { "id": "node9_1", "topic": "Prometheus" },
+                                { "id": "node9_2", "topic": "Grafana" },
+                                { "id": "node9_3", "topic": "ELK Stack" }
+                            ]
+                        },
+                        {
+                            "id": "node10",
+                            "topic": "Develop Soft Skills",
+                            "direction": "right",
+                            "children": [
+                                { "id": "node10_1", "topic": "Communication" },
+                                { "id": "node10_2", "topic": "Problem-Solving" },
+                                { "id": "node10_3", "topic": "Automation Thinking" }
+                            ]
+                        },
+                        {
+                            "id": "node11",
+                            "topic": "Build Real-World Projects",
+                            "direction": "right",
+                            "children": [
+                                { "id": "node11_1", "topic": "Personal Projects" },
+                                { "id": "node11_2", "topic": "Contribute to Open Source" }
+                            ]
+                        },
+                        {
+                            "id": "node12",
+                            "topic": "Learn Networking Basics and Advanced Concepts",
+                            "direction": "right",
+                            "children": [
+                                {
+                                    "id": "node12_1",
+                                    "topic": "Networking Basics",
+                                    "children": [
+                                        { "id": "node12_1_1", "topic": "IP Addressing" },
+                                        { "id": "node12_1_2", "topic": "Subnetting" },
+                                        { "id": "node12_1_3", "topic": "DNS" },
+                                        { "id": "node12_1_4", "topic": "Common Protocols" }
+                                    ]
+                                },
+                                {
+                                    "id": "node12_2",
+                                    "topic": "Advanced Networking Concepts",
+                                    "children": [
+                                        { "id": "node12_2_1", "topic": "Network Security" },
+                                        { "id": "node12_2_2", "topic": "Cloud Networking" },
+                                        { "id": "node12_2_3", "topic": "Container Networking" }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            };
+
+            const mindmapContainer = document.getElementById('mindmap_container');
+            const options = {
+                container: mindmapContainer,
+                editable: true,
+                theme: 'primary'  // You can change the theme as needed (e.g., 'primary', 'warning', 'danger', etc.)
+            };
+
+            const mindmap = new jsMind(options);
+            mindmap.show(mindmapData);
+        });
+    </script>
 </body>
 </html>
