@@ -33,6 +33,7 @@
     <div id="mindmap_container"></div>
 
     <script>
+        // Ensure the script runs after the DOM is fully loaded
         document.addEventListener('DOMContentLoaded', function () {
             var mindmapData = {
                 "meta": {
@@ -192,6 +193,7 @@
                 theme: 'primary'  // You can change the theme as needed (e.g., 'primary', 'warning', 'danger', etc.)
             };
 
+            // Initialize jsMind
             var mindmap = jsMind.show(options, mindmapData);
         });
     </script>
