@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevOps Engineer Mind Map</title>
-    <!-- Include the jsmind library from a CDN -->
+    <!-- Include the jsMind library from a CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsmind@2.2.0/style/jsmind.css" />
     <script src="https://cdn.jsdelivr.net/npm/jsmind@2.2.0/js/jsmind.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jsmind@2.2.0/js/jsmind.draggable.js"></script>
@@ -34,7 +34,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const mindmapData = {
+            var mindmapData = {
                 "meta": {
                     "name": "DevOpsEngineerMindMap",
                     "author": "ChatGPT",
@@ -186,15 +186,13 @@
                 }
             };
 
-            const mindmapContainer = document.getElementById('mindmap_container');
-            const options = {
-                container: mindmapContainer,
+            var options = {
+                container: 'mindmap_container',
                 editable: true,
                 theme: 'primary'  // You can change the theme as needed (e.g., 'primary', 'warning', 'danger', etc.)
             };
 
-            const mindmap = new jsMind(options);
-            mindmap.show(mindmapData);
+            var mindmap = jsMind.show(options, mindmapData);
         });
     </script>
 </body>
